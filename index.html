@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,17 +24,18 @@
       class="container fixed ml-17 p-5 bg-gray-500 text-white opacity-80 rounded-4xl active mt-5 "
     >
       <nav class="flex justify-between items-center mx-10 ">
-        <h1 class="font-bold text-3xl">
-          Port<span class="text-[#00ffff] text-2xl">folio</span>
+        <h1 class="font-bold text-5xl">
+          Port<span class="text-[#00ffff] text-3xl">folio</span>
         </h1>
         <div>
-          <ul class="flex justify-center items-center gap-5 text-xl font-medium">
+          <ul class="flex justify-center items-center gap-5 text-xl font-bold">
             <li class="hover:text-[#00ffff]"><a href="#home">Home</a></li>
             <li class="hover:text-[#00ffff]"><a href="#about">About</a></li>
             <li class="hover:text-[#00ffff]"><a href="#kills">Kills</a></li>
             <li class="hover:text-[#00ffff]"><a href="#contact">Contact</a></li>
           </ul>
         </div>
+        
     </header>
 
     <!--###############-->
@@ -42,7 +43,7 @@
     <!--###############-->
 
     <section
-      class="w-full h-screen flex justify-between items-center px-17 pt-20 gap-20 "
+      class="w-full h-screen flex justify-between items-center px-17 pt-20 gap-20"
       id="home"
     >
     <div>
@@ -71,8 +72,8 @@
     <!--BOUTTON DE TELECHARGEMENT-->
     <!--###############-->
 
-      <div class="border-2 rounded-full border-[#00ffff] text-[#00ffff] hover:text-black hover:bg-[#00ffff] py-2 text-lg font-medium px-9 mt-12 inline-block">
-      <a href="./src/asset/Lamine_Software_Engineering_CV-2.pdf_.pdf" class="cursor-pointer" download>DOWNLOAD CV 
+      <div class="border-2 rounded-full border-[#00ffff] text-white hover:text-black hover:bg-[#00ffff] py-2 text-lg font-medium px-9 mt-12 inline-block">
+      <a href="./src/asset/Lamine_Software_Engineering_CV. PDF.pdf" class="cursor-pointer" download>DOWNLOAD CV 
         <span class="material-symbols-outlined ">download</span></a>
       </div>
       </div>
@@ -81,7 +82,7 @@
     <!--IMAGE-->
     <!--###############-->
 
-      <div class="">
+      <div>
         <img
           src="./src/asset/lamine.jpg"
           alt="image generé par l'ia"
@@ -94,8 +95,8 @@
     <!--LE CORPS-->
     <!--###############-->
 
-    <main id="about" class="opacity-0 translate-y-24 transition-all duration-900 ease-out will-change-transform pt-17 pb-20" data-animate>
-            <h2 class="flex justify-center text-7xl font-extrabold mt-9  text-white
+    <main id="about" class="pt-17 pb-20">
+            <h2 class="flex justify-center text-7xl font-extrabold mt-12  text-white
             "> ABOUT  <span  class="text-[#00ffff]"> ME </span></h2>
 
 
@@ -108,7 +109,7 @@
     <!--A propos de moi-->
     <!--###############-->  
 
-            <div class="w-1/2" class="opacity-0 translate-y-24 transition-all duration-900 ease-out will-change-transform" data-animate>
+            <div class="w-1/2">
                 <p class="text-2xl font-medium text-white text-justify">
                     Moi,  c'est LAMINE.<br>
                     Passionné par le développement web depuis trois ans, je me spécialise dans
@@ -132,7 +133,7 @@
     <!--COMPETENCES-->
     <!--###############-->
 
-    <section id="kills" class="opacity-0 translate-y-24 transition-all duration-900 ease-out will-change-transform pt-20" data-animate>
+    <section id="kills" class="pt-20">
         <h2 class="flex justify-center text-7xl font-extrabold mt-9 text-white 
             ">SKILLS</h2>
             <div class="grid grid-cols-3 gap-10 ml-16 mr-4 my-16 text-white">
@@ -179,7 +180,7 @@
     <!--CONTACTE-->
     <!--###############-->
 
-    <section id="contact" class="pt-34 pb-10 flex justify-center opacity-0 translate-y-24 transition-all duration-900 ease-out will-change-transform" data-animate>
+    <section id="contact" class="pt-34 pb-10 flex justify-center">
       <div class="w-1/2 ">
         <h2 class="flex justify-center text-8xl font-extrabold mt-9 text-white">CONTACT <span class="text-[#00ffff]">ME</span></h2>
         <div class="px-20 text-white">
@@ -219,18 +220,5 @@
       </div>
     </section>
    
-    <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('opacity-100', 'translate-y-0');
-        entry.target.classList.remove('opacity-0', 'translate-y-24');
-      }
-    });
-  }, { threshold: 0.3 });
-
-  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-
-</script>
   </body>
 </html>
