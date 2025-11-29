@@ -21,7 +21,7 @@
     <!--###############-->
 
     <header
-      class="container fixed ml-17 p-5 bg-gray-500 text-white opacity-80 rounded-4xl active mt-5 "
+      class="container fixed ml-17 p-5 bg-gray-500 text-white opacity-50 rounded-4xl active mt-5 "
     >
       <nav class="flex justify-between items-center mx-10 ">
         <h1 class="font-bold text-5xl">
@@ -31,7 +31,7 @@
           <ul class="flex justify-center items-center gap-5 text-xl font-bold">
             <li class="hover:text-[#00ffff]"><a href="#home">Home</a></li>
             <li class="hover:text-[#00ffff]"><a href="#about">About</a></li>
-            <li class="hover:text-[#00ffff]"><a href="#kills">Kills</a></li>
+            <li class="hover:text-[#00ffff]"><a href="#kills">SKills</a></li>
             <li class="hover:text-[#00ffff]"><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -53,7 +53,7 @@
         <h2 class="uppercase text-9xl font-extrabold text-white">
           Sidime <span class="text-[#00ffff]">lamine</span>
         </h2>
-        <p class="text-7xl font-bold text-white">I'am a <span class="text-[#00ffff]">Web Developer</span></p>
+        <p class="text-7xl font-bold text-white">I'am a <span class="text-[#00ffff]" id="type">Web Developer</span></p>
       </div>
 
     <!--###############-->
@@ -73,8 +73,8 @@
     <!--###############-->
 
       <div class="border-2 rounded-full border-[#00ffff] text-white hover:text-black hover:bg-[#00ffff] py-2 text-lg font-medium px-9 mt-12 inline-block">
-      <a href="./src/asset/Lamine_Software_Engineering_CV. PDF.pdf" class="cursor-pointer" download>DOWNLOAD CV 
-        <span class="material-symbols-outlined ">download</span></a>
+      <a href="./src/asset/Lamine_Software_Engineering_CV. PDF.pdf" class="cursor-pointer flex " download>DOWNLOAD CV 
+        <div class="mx-3"><span class="material-symbols-outlined ">download</span></div></a>
       </div>
       </div>
 
@@ -219,6 +219,29 @@
 
       </div>
     </section>
-   
+   <script>
+      
+  let t = document.getElementById("type");
+  let a = ['Web Developer',  'Frontend Developer', 'Web Designer'];
+  let i = 0, j = 0;
+  let pause = false;
+
+  setInterval(() => {
+    if (pause) return;
+
+    t.textContent = a[i].slice(0, j++) + "|";
+
+    if (j > a[i].length) {
+      pause = true;
+      setTimeout(() => {
+        j = 0;
+        i = (i + 1) % a.length;
+        pause = false;
+      }, 800); // pause un peu plus longue pour que ce soit beau
+    }
+  }, 100);
+
+
+   </script>
   </body>
 </html>
